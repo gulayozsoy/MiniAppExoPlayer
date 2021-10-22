@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.miniappexoplayer.ui.mainpage.MainPageViewModel" />
+    </data>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/backImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/hintText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/avenir_heavy"
+            android:gravity="center"
+            android:text="@string/film"
+            android:textAllCaps="true"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:id="@+id/bottomlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@id/hintText"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="12dp"
+            android:onClick="@{() -> viewmodel.getAllData()}">
+
+            <TextView
+                android:id="@+id/foreignMovie"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:text="@string/filmtitle1"
+                android:gravity="center"
+                android:fontFamily="@font/avenir_heavy" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:text="@string/filmtitle2"
+                android:gravity="center"
+                android:fontFamily="@font/avenir_heavy"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:text="@string/filmtitle3"
+                android:gravity="center"
+                android:fontFamily="@font/avenir_heavy"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

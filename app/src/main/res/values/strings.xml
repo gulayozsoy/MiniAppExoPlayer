@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MiniAppExoPlayer</string>
+    <string name="featured_movie">featured movie</string>
+    <string name="image_poster">image poster</string>
+    <string name="film">FİLM</string>
+    <string name="filmtitle">Yabancı Film</string>
+    <string name="filmtitle1">Yabancı Film</string>
+    <string name="filmtitle2">Yerli Film</string>
+    <string name="filmtitle3">Betimleme</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action">Action</string>
+    <string name="drama">Drama</string>
+    <string name="animation">Animation</string>
+    <string name="comedy">Comedy</string>
+    <string name="change_repeat_mode">Change repeat mode</string>
+</resources>

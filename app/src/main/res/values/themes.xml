@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MiniAppExoPlayer" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="l">true</item>
+    </style>
+
+    <style name="PlayerTheme" parent="android:Theme.Holo">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="ViewPagerTextStyle">
+        <item name="android:fontFamily">@font/avenir_book</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="singleLine">false</item>
+    </style>
+
+    <style name="CardsTextStyle">
+        <item name="android:fontFamily">@font/avenir_book</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+
+</resources>

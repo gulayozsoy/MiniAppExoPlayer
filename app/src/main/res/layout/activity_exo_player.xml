@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="movies"
+            type="com.example.miniappexoplayer.model.Movies"/>
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true">
+
+        <TextView
+            android:id="@+id/movieTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{movies.title}"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:ellipsize="end"
+            android:layout_marginTop="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:maxLines="1"
+            android:background="@color/colorAccent"
+            android:fontFamily="@font/avenir_heavy"
+            android:textColor="@color/colorPrimary"
+            tools:text="DENEME"/>
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/movieTitle"
+            android:focusable="true">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </com.google.android.exoplayer2.ui.PlayerView>
+
+    </RelativeLayout>
+
+</layout>
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="movies"
+            type="com.example.miniappexoplayer.model.Movies" />
+
+        <variable
+            name="itemClickInterface"
+            type="com.example.miniappexoplayer.ui.ItemsClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@color/darkBlack"
+        android:onClick="@{() -> itemClickInterface.onItemClick(movies)}">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginTop="1dp"
+                android:id="@+id/moviePoster"
+                android:scaleType="center"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                app:imageUrl="@{movies.posterPath}"
+                android:contentDescription="@string/image_poster"
+                tool:src="@drawable/ic_image"/>
+
+            <TextView
+                android:layout_marginTop="1dp"
+                android:id="@+id/movieTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{movies.title}"
+                tool:text="Phantom"
+                android:theme="@style/CardsTextStyle"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

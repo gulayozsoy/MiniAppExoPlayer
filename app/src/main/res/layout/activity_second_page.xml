@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.mainpage.MainPageActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/second_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            app:layout_collapseMode="pin"
+            app:titleTextColor="@color/colorAccent"
+            app:layout_scrollFlags="scroll|snap">
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/backImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <TextView
+                    android:id="@+id/hintText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/avenir_heavy"
+                    android:gravity="center"
+                    android:text="@string/film"
+                    android:textAllCaps="true"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:id="@+id/bottomlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/hintText"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="12dp" >
+
+                    <TextView
+                        android:id="@+id/foreignMovie"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/filmtitle1"
+                        android:gravity="center"
+                        android:fontFamily="@font/avenir_heavy" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/filmtitle2"
+                        android:gravity="center"
+                        android:fontFamily="@font/avenir_heavy"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/filmtitle3"
+                        android:gravity="center"
+                        android:fontFamily="@font/avenir_heavy"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/secondTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@drawable/second_tab_selector"
+            app:tabTextColor="@color/colorAccent"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabIndicatorHeight="0dp">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filmtitle1"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filmtitle2" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filmtitle3" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/secondviewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
