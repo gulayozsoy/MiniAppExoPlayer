@@ -10,7 +10,7 @@ data class  MovieResponse(
 ): Parcelable
 
 @Parcelize
-data class Movies(
+open class Movies(
     @SerializedName("backdrop_path")
     val backdropPath: String?,
     @SerializedName("genre_ids")
@@ -21,6 +21,7 @@ data class Movies(
     @SerializedName("poster_path")
     val posterPath : String?,
     @SerializedName("release_date")
-    val releaseDate : String?
+    val releaseDate : String?,
+    val id: Int
 ): Parcelable
 

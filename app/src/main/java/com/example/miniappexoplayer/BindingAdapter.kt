@@ -5,6 +5,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
+import com.example.miniappexoplayer.base.BaseRecyclerViewAdapter
 import com.example.miniappexoplayer.model.Movies
 import com.example.miniappexoplayer.ui.adapters.*
 import com.example.miniappexoplayer.util.Constants.Constants.BIG_POSTER_URL
@@ -41,26 +42,9 @@ object BindingAdapters {
     @BindingAdapter("list")
     fun bindList(recyclerView: RecyclerView, list: List<Movies>?) {
 
-        when(recyclerView.adapter) {
-            is DramaMovieAdapter -> {
-                if (list != null) {
-                    (recyclerView.adapter as DramaMovieAdapter).updateItems(list)
-                }
-            }
-            is ActionMovieAdapter -> {
-                if (list != null) {
-                    (recyclerView.adapter as ActionMovieAdapter).updateItems(list)
-                }
-            }
-            is AnimationMovieAdapter -> {
-                if (list != null) {
-                    (recyclerView.adapter as AnimationMovieAdapter).updateItems(list)
-                }
-            }
-            is ComedyMovieAdapter -> {
-                if (list != null) {
-                    (recyclerView.adapter as ComedyMovieAdapter).updateItems(list)
-                }
+        if (recyclerView.adapter is BaseRecyclerViewAdapter) {
+            if (list != null) {
+                (recyclerView.adapter as BaseRecyclerViewAdapter).submitList(list)
             }
         }
     }

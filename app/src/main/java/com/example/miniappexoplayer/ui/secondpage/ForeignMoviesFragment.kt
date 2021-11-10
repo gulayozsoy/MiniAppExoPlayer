@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.lifecycleScope
 import com.example.miniappexoplayer.databinding.FragmentForeignMoviesBinding
 import com.example.miniappexoplayer.model.Movies
 import com.example.miniappexoplayer.ui.ItemsClickListener
@@ -27,6 +28,7 @@ class ForeignMoviesFragment : Fragment(), ItemsClickListener {
     private lateinit var dramaMovieAdapter: DramaMovieAdapter
     private lateinit var animationMovieAdapter: AnimationMovieAdapter
     private lateinit var comedyMovieAdapter: ComedyMovieAdapter
+
 
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentForeignMoviesBinding.inflate(inflater, container, false)
